@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "d5299305-69e2-426e-862a-415d1df55bf0",
-		"name": "CV-Forge",
+		"name": "Laravel-passport-setup",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "30541800",
 		"_collection_link": "https://blue-water-587049.postman.co/workspace/My-Workspace~21cc8f68-b3f5-4fb1-8c19-5805de2e1806/collection/30541800-d5299305-69e2-426e-862a-415d1df55bf0?action=share&source=collection_link&creator=30541800"
