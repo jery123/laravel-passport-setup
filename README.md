@@ -29,8 +29,6 @@ composer install
 ### 3. Copy and set up environment
 
 ```bash
-Copier
-Modifier
 cp .env.example .env
 php artisan key:generate
 ```
@@ -39,16 +37,12 @@ Edit `.env` and set up your database credentials.
 ### 4. Run database migrations
 
 ```bash
-Copier
-Modifier
 php artisan migrate
 ```
 
 ### 5. Install Laravel Passport
 
 ```bash
-Copier
-Modifier
 composer require laravel/passport
 php artisan passport:install
 ```
@@ -98,8 +92,6 @@ class User extends Authenticatable
 ### 9. Start the local server
 
 ```bash
-Copier
-Modifier
 php artisan serve
 ```
 
@@ -127,6 +119,7 @@ Authorization: Bearer {access_token}
 
 <li>Use .gitignore to avoid leaking sensitive config files.</li>
 </ul>
+
 # 📚 References
 Laravel Passport Documentation
 
