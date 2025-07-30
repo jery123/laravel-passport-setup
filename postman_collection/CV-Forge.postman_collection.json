@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "d5299305-69e2-426e-862a-415d1df55bf0",
+		"name": "CV-Forge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30541800",
+		"_collection_link": "https://blue-water-587049.postman.co/workspace/My-Workspace~21cc8f68-b3f5-4fb1-8c19-5805de2e1806/collection/30541800-d5299305-69e2-426e-862a-415d1df55bf0?action=share&source=collection_link&creator=30541800"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "Register user",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "User 1",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "user1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "User12345",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/auth/register",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "User12345",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/auth/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User Profile",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{user_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "User12345",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/auth/profile",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{user_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "User12345",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/auth/profile",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "localhost:8080",
+			"type": "default"
+		},
+		{
+			"key": "user_token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk4NThhNC01NjNkLTczNWYtOWE4Yy0yY2U5MTQ1NTEyNTgiLCJqdGkiOiIxZTYyZjNiODg5MGZhNTkxNDI0YWQ0NWExZTUxMTRlZjE3ZWRmMGMyN2M3ODY2NjQ0ZTI2ZjM0NTdmZTQ3ZThkZjNhMzQ4YmU3Y2U4NTY0NCIsImlhdCI6MTc1MzgzNDg5Ny4wMjQyNDksIm5iZiI6MTc1MzgzNDg5Ny4wMjQyNTMsImV4cCI6MTc4NTM3MDg5Ni42Njg2OTksInN1YiI6IjEiLCJzY29wZXMiOltdfQ.EbM_lFRJVn-k_VXrH_WiZ0RDlRy1FcPPGTQt2Lb2kqS2kHmcG0P2JIkzDZc9ozn_Tq2HQJ_-f0MGInE3bEASDIo9CbbxN5kfo7fzjsQvFJmQ9RmyF7BVmH8wlF08QLiUQG74MmlS1QFETXDYnDpp0CfDEHX5J8FSfpEhuseUdSiwGHA_LEDKHMNpIY9XJ96O9qnmmnRSDYXQmt4KehNLNo0iAMoybY6r2JEuojD_TKnz36yBZHWHVHuCAnL9SyL9Ds3Ew__pFHd8VrvPgdUVoJ3Sxp6kVJMMkQSHmku14ZiWsYWgaRhzwOuidbX580VUjv1fnO_dMaI047DDKLFTBqDzyQvVAWSTGi9H9x-l2jcrUN3Uu0l4snMFpYLo70L7JG-EEqxGyE-riEdXKBQxEjvV9wid4GzIJrwnCYXvKOAU_32U_1nMt6jrOu93kcuUzcqAo8Jo9lDTjWYpijZqTWDUdwdbSb4HR7yKG8790XzcA7SICfZB6u-75-g9bVTP0iQa6BZ0v6URKj8GT0hpZfR-g6zF_yZmOY6pBu-Xs0BZ_-Upg3UAJKgnlGOgepWvuM8YorP03M0FBJpp3OsPhHmyuZtQTdSt1BREPM_QxNzHnZN2yxrN0oRggykncd_URFTlIk2G3TiyAppetBbPOSf4EC8X_Ukd9Zkgm5z2K40",
+			"type": "default"
+		}
+	]
+}
